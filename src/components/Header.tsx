@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -15,27 +15,27 @@ export default function Header() {
             className="rounded-full"
           />
           <h1 className="text-[28px] font-bold text-[#008CFF]">
-            Boy Alone Tech
+            BOY ALONE TECH
           </h1>
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <a href="/" className="hover:text-[#008CFF] text-sm">
+          <Link href="/" className="hover:text-[#008CFF] text-sm">
             Home
-          </a>
-          <a href="#skills" className="hover:text-[#008CFF] text-sm">
+          </Link>
+          <Link href="#skills" className="hover:text-[#008CFF] text-sm">
             Skill
-          </a>
-          <a href="#projects" className="hover:text-[#008CFF] text-sm">
+          </Link>
+          <Link href="#projects" className="hover:text-[#008CFF] text-sm">
             Projects
-          </a>
-          <a href="#services" className="hover:text-[#008CFF] text-sm">
+          </Link>
+          <Link href="#services" className="hover:text-[#008CFF] text-sm">
             Services
-          </a>
-          <a href="#about" className="hover:text-[#008CFF] text-sm">
+          </Link>
+          <Link href="#about" className="hover:text-[#008CFF] text-sm">
             About
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ProjectCard = () => {
@@ -30,9 +31,11 @@ const ProjectCard = () => {
             className="relative group rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
           >
             {/* Project Image */}
-            <img
+            <Image
               src={project.image}
               alt={project.title}
+              width={400}
+              height={400}
               className="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500 ease-in-out"
             />
 

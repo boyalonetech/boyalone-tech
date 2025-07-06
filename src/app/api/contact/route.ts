@@ -7,6 +7,7 @@ export async function POST(req: Request) {
   const {
     name,
     email,
+    text,
     message,
     howMet,
     websiteType,
@@ -35,11 +36,19 @@ export async function POST(req: Request) {
 New Contact Submission:
 
 📛 Name: ${name}
+
 📧 Email: ${email}
+
 📍 How did they meet you: ${howMet || "Not specified"}
+
 💻 Website Type: ${websiteType || "Not specified"}
-📱 App Type: ${appType || "Not specified"}
+
+📞 Contact Type: ${text || "Not specified"}
+
+📱 App Type: ${appType || "Not An App"}
+
 💵 Budget: ${budget || "Not specified"}
+
 ☎️ Preferred Contact Method: ${contactPreference || "Not specified"}
 
 📝 Message:

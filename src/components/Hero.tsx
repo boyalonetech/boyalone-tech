@@ -9,13 +9,15 @@ import Profile from "./Profile";
 
 export default function Home() {
   return (
-    <main className="flex flex-col fixed overflow-y-scroll sm:flex-row bg-white text-gray-900 font-sans min-h-screen w-full">
+    <main className="flex flex-col  overflow-y-scroll sm:flex-row bg-white text-gray-900 font-sans min-h-screen w-full mt-12">
       {/* Sidebar */}
-      <Profile />
+      <div className="lg:hidden block">
+        <Profile />
+      </div>
 
       {/* Main Content */}
       <section
-        className="flex-1 h-screen overflow-y-auto p-6 sm:p-10 mt-20 sm:mt-12"
+        className="flex-1 h-screen overflow-y-auto p-3 lg:ml-[310px] sm:p-2 mt-20 sm:mt-12"
         id="home"
       >
         {/* Header */}
@@ -25,10 +27,10 @@ export default function Home() {
               Hey <span className="text-blue-500">there!</span> 👋
             </h1>
             <p className="mt-2 text-gray-600 max-w-xl">
-              I'm thrilled to tell you a bit about myself. I have over 6+ years
+              I`m thrilled to tell you a bit about myself. I have over 6+ years
               of IT experience specializing in PHP, database development, and
-              open-source frameworks. If you're in need of a motivated team
-              player, let's connect!
+              open-source frameworks. If you`re in need of a motivated team
+              player, let`s connect!
             </p>
           </div>
           <FiMoon className="text-2xl text-gray-600" />

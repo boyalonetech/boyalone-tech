@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   FaMapMarkerAlt,
-  FaGithub,
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
@@ -14,15 +13,15 @@ const Profile = () => {
 
   return (
     <>
-      <aside className="w-full lg:max-w-[320px] sm:w-full sm:max-w-sm bg-white rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
+      <aside className="w-full lg:max-w-[320px] sm:w-full sm:max-w-sm bg-white pb-6 rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
         {/* Cover Image */}
-        <div className="relative h-50 lg:h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+        <div className="relative h-[180px] lg:h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
 
         {/* Profile Image */}
         <div className="relative flex justify-center">
           <div
             onClick={() => setShowPopup(true)}
-            className="cursor-pointer absolute -top-16 w-32 h-32 rounded-full border-4 border-white overflow-hidden shadow-md"
+            className="cursor-pointer absolute -top-16 w-33 h-33 rounded-full border-4 border-white overflow-hidden shadow-md"
           >
             <Image
               src="/IMG_4895~2.JPG"
@@ -35,7 +34,7 @@ const Profile = () => {
         </div>
 
         {/* Profile Details */}
-        <div className="mt-18 text-center px-6 pb-6">
+        <div className="mt-18 text-center px-3 pb-2">
           <h2 className="text-[22px] font-bold text-gray-800">
             Divine Timothy
           </h2>
@@ -224,16 +223,21 @@ const Profile = () => {
             <div>
               <h4 className="text-gray-700 font-semibold mb-1">Tech Stack</h4>
               <div className="flex flex-wrap gap-2 text-xs">
-                {["React", "Next.js", "Tailwind", "Firebase", "TypeScript"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
+                {[
+                  "React",
+                  "Next.js",
+                  "Tailwind",
+                  "Firebase",
+                  "TypeScript",
+                  "VsCode",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -305,10 +309,10 @@ const Profile = () => {
               <h4 className="text-gray-700 font-semibold mb-1">Languages</h4>
               <p>English, Igbo</p>
 
-              <div className="mt-6">
+              <div className="mt-6 hidden lg:block">
                 <hr />
 
-                <h1 className="p-2 text-black text-md font-medium">
+                <h1 className="p-2 text-black text-center text-md font-medium">
                   &copy; {new Date().getFullYear()} Boy Alone Tech.
                 </h1>
               </div>
@@ -336,7 +340,7 @@ const Profile = () => {
               width={800}
               height={800}
               quality={100}
-              className="rounded-2xl object-cover w-full h-64"
+              className="rounded-2xl object-cover w-full lg:scale-[1.7] h-64"
             />
           </div>
         </div>

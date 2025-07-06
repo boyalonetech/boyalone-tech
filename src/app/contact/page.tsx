@@ -2,12 +2,14 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    text: "",
     howMet: "",
     websiteType: "",
     appType: "",
@@ -48,6 +50,7 @@ const ContactForm = () => {
         name: "",
         email: "",
         message: "",
+        text: "",
         howMet: "",
         websiteType: "",
         appType: "",
@@ -60,14 +63,14 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-4xl ml-[350px] mx-auto py-16 px-4 mt-12">
+    <div className="max-w-4xl lg:ml-[350px] mx-auto py-16 mt-12">
       <h2 className="text-4xl font-extrabold text-center mb-8 text-gray-800">
         Get In Touch
       </h2>
 
-      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto p-2">
         Ready to bring your idea to life? Whether you need a portfolio, business
-        site, e-commerce store, or a full-featured mobile app — I'm here to
+        site, e-commerce store, or a full-featured mobile app — I`m here to
         help. Fill out the form below with as much detail as possible so I can
         understand your project and get back to you with a tailored solution.
       </p>
@@ -151,6 +154,15 @@ const ContactForm = () => {
           <option value="Phone">Phone</option>
         </select>
 
+        <input
+          name="text" // ✅ Correct name
+          value={formData.text}
+          onChange={handleChange}
+          placeholder="Contact , Email , Whatsapp"
+          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          required
+        />
+
         {/* How Did You Meet Us */}
         <div>
           <label className="block font-medium text-gray-700 mb-2">
@@ -190,7 +202,7 @@ const ContactForm = () => {
           onChange={handleChange}
           rows={5}
           placeholder="Any additional information?"
-          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full p-3 border border-gray-300 resize-none rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
           required
         ></textarea>
 
@@ -226,14 +238,15 @@ const ContactForm = () => {
                 🎉 Message Sent!
               </h3>
               <p className="text-gray-600 mb-4">
-                Thank you for reaching out. I’ll respond to your message soon.
+                Thank you for reaching out. I`ll respond to your message soon.
               </p>
-              <button
+              <Link
+                href="/"
                 onClick={() => setShowPopup(false)}
                 className="mt-2 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
               >
                 Close
-              </button>
+              </Link>
             </motion.div>
           </motion.div>
         )}

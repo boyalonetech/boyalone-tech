@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Profile from "@/components/Profile";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -148,10 +149,12 @@ export default function RootLayout({
 
       <body className={`${inter.className} antialiased`}>
         <Header />
-        <div className="fixed top-0 left-0 h-screen w-[300px] z-10">
+        <div className="fixed top-0 left-0 h-screen w-[300px] z-20 hidden lg:block">
           {/* <Profile /> */}
+          <Profile />
         </div>
         {children}
+        <NavBar />
       </body>
     </html>
   );

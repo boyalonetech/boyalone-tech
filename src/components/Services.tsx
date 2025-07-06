@@ -4,10 +4,8 @@ import {
   FaPaintBrush,
   FaMobileAlt,
   FaVideo,
-  FaTabletAlt,
 } from "react-icons/fa";
 import { FaDesktop, FaEarthAfrica } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
 
 const ServicesCard = () => {
   const services = [

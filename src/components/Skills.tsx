@@ -294,7 +294,7 @@ const Skills = () => {
           return (
             <div
               key={skill.name}
-              className="bg-[#f5f8ff] p-4 rounded shadow text-center flex flex-col items-center"
+              className="bg-[#f5f8ff] p-2 rounded shadow text-center flex flex-col items-center"
             >
               {/* Circular Progress with Icon in center */}
               <div className="relative w-24 h-24 mb-2">
