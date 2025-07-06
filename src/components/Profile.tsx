@@ -35,11 +35,11 @@ const Profile = () => {
 
         {/* Profile Details */}
         <div className="mt-18 text-center px-3 pb-2">
-          <h2 className="text-[22px] font-bold text-gray-800">
+          <h2 className="text-[25px] font-bold text-gray-800">
             Divine Timothy
           </h2>
           <div className="flex flex-col justify-center items-center">
-            <p className="text-md text-blue-500">Full-Stack Web Developer</p>
+            <p className="text-md text-blue-700">Full-Stack Web Developer</p>
             <div className="flex gap-2 w-max items-center">
               <p className="text-sm text-gray-500">App Developer</p>
               <span>|</span>
