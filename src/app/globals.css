@@ -1,9 +1,25 @@
 @import "tailwindcss";
 
 .prof {
+  /* Firefox */
   scrollbar-width: none;
+  -ms-overflow-style: none; /* IE/Edge */
+
+  /* Webkit (Chrome, Safari) */
+}
+.prof::-webkit-scrollbar {
+  display: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 100px; /* Adjust for header height */
+}
+
+/* globals.css or tailwind.config */
+.group:hover .text-blue-500 {
+  text-shadow: 0 0 8px #00c6ff;
 }

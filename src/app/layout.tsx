@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Profile from "@/components/Profile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -147,7 +148,11 @@ export default function RootLayout({
 
       <body className={`${inter.className} antialiased`}>
         <Header />
-        {children}</body>
+        <div className="fixed top-0 left-0 h-screen w-[300px] z-10">
+          {/* <Profile /> */}
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

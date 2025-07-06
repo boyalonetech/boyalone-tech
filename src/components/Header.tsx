@@ -14,26 +14,28 @@ export default function Header() {
             height={50}
             className="rounded-full"
           />
-          <h1 className="text-3xl font-bold text-[#008CFF]">Boy Alone Tech</h1>
+          <h1 className="text-[28px] font-bold text-[#008CFF]">
+            Boy Alone Tech
+          </h1>
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
-          <Link href="#home" className="hover:text-[#008CFF] text-sm">
+          <a href="/" className="hover:text-[#008CFF] text-sm">
             Home
-          </Link>
-          <Link href="#skill" className="hover:text-[#008CFF] text-sm">
+          </a>
+          <a href="#skills" className="hover:text-[#008CFF] text-sm">
             Skill
-          </Link>
-          <Link href="#projects" className="hover:text-[#008CFF] text-sm">
+          </a>
+          <a href="#projects" className="hover:text-[#008CFF] text-sm">
             Projects
-          </Link>
-          <Link href="#services" className="hover:text-[#008CFF] text-sm">
+          </a>
+          <a href="#services" className="hover:text-[#008CFF] text-sm">
             Services
-          </Link>
-          <Link href="#about" className="hover:text-[#008CFF] text-sm">
+          </a>
+          <a href="#about" className="hover:text-[#008CFF] text-sm">
             About
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

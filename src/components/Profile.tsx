@@ -14,10 +14,9 @@ const Profile = () => {
 
   return (
     <>
-      {/* Sidebar */}
-      <aside className="w-max max-w-sm bg-white rounded-xl shadow-lg h-screen overflow-hidden overflow-y-scroll my-18 ml-[1px] prof">
+      <aside className="w-full lg:max-w-[320px] sm:w-full sm:max-w-sm bg-white rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
         {/* Cover Image */}
-        <div className="relative h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+        <div className="relative h-50 lg:h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
 
         {/* Profile Image */}
         <div className="relative flex justify-center">
@@ -54,7 +53,11 @@ const Profile = () => {
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 text-xl text-gray-600 mt-4">
-            <Link href="https://web.facebook.com/boya1one" target="_blank" className="hover:text-blue-500">
+            <Link
+              href="https://web.facebook.com/boya1one"
+              target="_blank"
+              className="hover:text-blue-500"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width={20}
@@ -183,7 +186,10 @@ const Profile = () => {
               </span>
               My Resume
             </Link>
-            <button className="border border-blue-500 hover:bg-blue-50 text-blue-500 px-3 py-2 rounded-md text-sm transition flex items-center gap-2">
+            <Link
+              href="/contact"
+              className="border border-blue-500 hover:bg-blue-50 text-blue-500 px-3 py-2 rounded-md text-sm transition flex items-center gap-2"
+            >
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -203,11 +209,11 @@ const Profile = () => {
                 </svg>
               </span>
               Contact Me
-            </button>
+            </Link>
           </div>
 
           {/* Additional Content */}
-          <div className="border-t mt-6 pt-4 space-y-4 text-sm text-gray-600  max-w-[275px] text-left">
+          <div className="border-t mt-6 pt-4 space-y-4 text-sm text-gray-600 text-left">
             {/* Bio */}
             <p>
               Passionate about solving real-world problems using tech. I build
@@ -298,27 +304,26 @@ const Profile = () => {
             <div className="mb-12">
               <h4 className="text-gray-700 font-semibold mb-1">Languages</h4>
               <p>English, Igbo</p>
-            </div>
 
-            {/* Download CV */}
-            <a
-              href="/DivineTimothy-CV.pdf"
-              download
-              className="block text-blue-500 hover:underline"
-            >
-              📄 Download My CV
-            </a>
+              <div className="mt-6">
+                <hr />
+
+                <h1 className="p-2 text-black text-md font-medium">
+                  &copy; {new Date().getFullYear()} Boy Alone Tech.
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </aside>
 
-      {/* Popup Modal */}
+      {/* Image Popup */}
       {showPopup && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center w-full "
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
           onClick={() => setShowPopup(false)}
         >
-          <div className="relative bg-white p-4 px-8 rounded-lg shadow-lg max-w-2xl">
+          <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-md">
             <button
               onClick={() => setShowPopup(false)}
               className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl"
@@ -331,7 +336,7 @@ const Profile = () => {
               width={800}
               height={800}
               quality={100}
-              className="rounded-2xl object-cover w-96 h-72 mx-auto scale-[1.5]"
+              className="rounded-2xl object-cover w-full h-64"
             />
           </div>
         </div>

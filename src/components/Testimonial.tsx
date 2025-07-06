@@ -35,7 +35,7 @@ const TestimonialCard = () => {
 
   return (
     <div className="py-16 px-6 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-12">What Clients Say</h2>
+      <h2 className="text-3xl font-bold text-center mb-12" id="review">What Clients Say</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
         {testimonials.map((t, index) => (
