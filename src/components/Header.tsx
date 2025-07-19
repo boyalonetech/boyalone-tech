@@ -8,15 +8,12 @@ export default function Header() {
         {/* Logo and Name */}
         <div className="flex items-center gap-4">
           <Image
-            src="/logo.png"
+            src="/boyalontech.png"
             alt="Logo"
             width={50}
             height={50}
             className="rounded-full"
           />
-          <h1 className="text-[28px] font-bold text-[#008CFF]">
-            BOY ALONE TECH
-          </h1>
         </div>
 
         {/* Desktop Nav */}
