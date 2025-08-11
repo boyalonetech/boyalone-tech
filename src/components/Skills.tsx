@@ -332,7 +332,9 @@ const Skills = () => {
               </div>
 
               {/* Skill Name */}
-              <h3 className="sm font-semibold">{skill.name}</h3>
+              <h3 className="sm font-semibold">
+                {skill.name}
+              </h3>
 
               {/* Percentage */}
               <p className="sm  mt-1">{skill.percent}%</p>

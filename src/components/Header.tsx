@@ -232,10 +232,60 @@ export default function Header() {
               </span>
             </Link>
           ))}
+          {/* Menu icon */}
+          <span
+            className="menu relative cursor-pointer hidden lg:block"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            {/* Theme Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={25}
+              height={25}
+              viewBox="0 0 14 14"
+            >
+              <path
+                fill="#3B82F6"
+                fillRule="evenodd"
+                d="M10.73.123a.5.5 0 0 1 .379.179l.156.186c1.08 1.29 1.902 2.273 2.576 3.586c.512.999-.288 2.049-1.308 2.049H8.884c-1.005 0-1.807-1.024-1.316-2.021c.687-1.397 1.57-2.415 2.78-3.807a.5.5 0 0 1 .382-.172M8.21 7.496a.625.625 0 0 0 0 1.25h5a.625.625 0 0 0 0-1.25zm0 5a.625.625 0 1 0 0 1.25h5a.625.625 0 0 0 0-1.25zm-.624-1.875c0-.345.28-.625.625-.625h4.998a.625.625 0 0 1 0 1.25H8.211a.625.625 0 0 1-.625-.625M1.717.233c.48-.055 1-.11 1.538-.11c.537 0 1.057.055 1.537.11c.71.082 1.278.648 1.357 1.361c.053.479.105.995.105 1.529s-.052 1.05-.105 1.528a1.55 1.55 0 0 1-1.357 1.36c-.48.056-1 .112-1.537.112a13 13 0 0 1-1.538-.111A1.55 1.55 0 0 1 .36 4.65C.307 4.172.255 3.656.255 3.123s.052-1.05.105-1.529A1.55 1.55 0 0 1 1.717.234m4.789 10.39c0 2.083-1.171 3.254-3.253 3.254S0 12.706 0 10.623C0 8.542 1.171 7.37 3.253 7.37s3.253 1.171 3.253 3.254"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+
+            {/* Pop-up Menu */}
+            {menuOpen && (
+              <div className="absolute right-0 top-15 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black/10 p-3">
+                <button
+                  onClick={() => setTheme("light")}
+                  className={`flex items-center gap-2 px-3 py-2 text-sm w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-200 ${
+                    theme === "light" ? "font-bold" : ""
+                  }`}
+                >
+                  ☀ Light
+                </button>
+                <button
+                  onClick={() => setTheme("dark")}
+                  className={`flex items-center gap-2 px-3 py-2 text-sm w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-200 ${
+                    theme === "dark" ? "font-bold" : ""
+                  }`}
+                >
+                  🌙 Night
+                </button>
+                <button
+                  onClick={() => setTheme("auto")}
+                  className={`flex items-center gap-2 px-3 py-2 text-sm w-full text-left rounded-md hover:bg-gray-100 dark:hover:bg-gray-200 ${
+                    theme === "auto" ? "font-bold" : ""
+                  }`}
+                >
+                  ⚙ Automatic
+                </button>
+              </div>
+            )}
+          </span>
         </nav>
         {/* Menu icon */}
         <span
-          className="menu relative cursor-pointer"
+          className="menu relative cursor-pointer lg:hidden"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
           {/* Theme Icon */}

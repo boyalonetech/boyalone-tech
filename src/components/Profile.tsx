@@ -9,7 +9,7 @@ const Profile = () => {
 
   return (
     <>
-      <aside className="w-full mt-4 lg:mt-0 lg:max-w-[320px] sm:w-full sm:max-w-sm  pb-6 rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
+      <aside className="w-full mt-4 lg:max-w-[320px] sm:w-full sm:max-w-sm  pb-6 rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-17  sm:ml-[1px]">
         {/* Cover Image */}
         <div className="relative h-[180px] lg:h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
 
