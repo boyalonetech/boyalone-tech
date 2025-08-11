@@ -64,11 +64,9 @@ const ContactForm = () => {
 
   return (
     <div className="max-w-4xl lg:ml-[350px] mx-auto py-16 mt-12">
-      <h2 className="text-4xl font-extrabold text-center mb-8 text-gray-800">
-        Get In Touch
-      </h2>
+      <h2 className="4xl font-extrabold center mb-8 gray-800">Get In Touch</h2>
 
-      <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto p-2">
+      <p className="center  mb-10 max-w-2xl mx-auto p-2">
         Ready to bring your idea to life? Whether you need a portfolio, business
         site, e-commerce store, or a full-featured mobile app — I`m here to
         help. Fill out the form below with as much detail as possible so I can
@@ -165,7 +163,7 @@ const ContactForm = () => {
 
         {/* How Did You Meet Us */}
         <div>
-          <label className="block font-medium text-gray-700 mb-2">
+          <label className="block font-medium gray-700 mb-2">
             How did you meet me?
           </label>
           <div className="space-y-2">
@@ -188,9 +186,9 @@ const ContactForm = () => {
                   value={option}
                   checked={formData.howMet === option}
                   onChange={handleChange}
-                  className="text-blue-600"
+                  className="blue-600"
                 />
-                <span className="capitalize text-gray-800">{option}</span>
+                <span className="capitalize gray-800">{option}</span>
               </label>
             ))}
           </div>
@@ -209,14 +207,14 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className={`w-full py-3 rounded-xl font-semibold text-white transition ${
+          className={`w-full py-3 rounded-xl font-semibold white transition ${
             loading ? "bg-gray-400" : "bg-blue-600 hover:bg-blue-700"
           }`}
         >
           {loading ? "Sending..." : "Send Message"}
         </button>
 
-        {status && <p className="text-center text-red-500">{status}</p>}
+        {status && <p className="center red-500">{status}</p>}
       </form>
 
       {/* Popup */}
@@ -232,18 +230,16 @@ const ContactForm = () => {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              className="bg-white p-8 rounded-2xl shadow-xl text-center max-w-md mx-auto"
+              className="bg-white p-8 rounded-2xl shadow-xl center max-w-md mx-auto"
             >
-              <h3 className="text-2xl font-bold text-green-600 mb-2">
-                🎉 Message Sent!
-              </h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="2xl font-bold green-600 mb-2">🎉 Message Sent!</h3>
+              <p className="gray-600 mb-4">
                 Thank you for reaching out. I`ll respond to your message soon.
               </p>
               <Link
                 href="/"
                 onClick={() => setShowPopup(false)}
-                className="mt-2 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                className="mt-2 px-6 py-2 bg-blue-600 white rounded-md hover:bg-blue-700 transition"
               >
                 Close
               </Link>

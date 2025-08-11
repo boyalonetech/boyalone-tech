@@ -1,4 +1,5 @@
 // app/api/contact/route.ts
+export const runtime = "nodejs"; // important for nodemailer
 
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
@@ -36,21 +37,13 @@ export async function POST(req: Request) {
 New Contact Submission:
 
 📛 Name: ${name}
-
 📧 Email: ${email}
-
 📍 How did they meet you: ${howMet || "Not specified"}
-
 💻 Website Type: ${websiteType || "Not specified"}
-
 📞 Contact Type: ${text || "Not specified"}
-
 📱 App Type: ${appType || "Not An App"}
-
 💵 Budget: ${budget || "Not specified"}
-
 ☎️ Preferred Contact Method: ${contactPreference || "Not specified"}
-
 📝 Message:
 ${message}
 `;
@@ -64,7 +57,7 @@ ${message}
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Email sending error:", err);
+    console.error("Message Not Sent:", err);
     return NextResponse.json(
       { success: false, error: "Something went wrong" },
       { status: 500 }

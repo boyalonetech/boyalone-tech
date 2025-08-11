@@ -20,6 +20,21 @@ html {
 }
 
 /* globals.css or tailwind.config */
-.group:hover .text-blue-500 {
-  text-shadow: 0 0 8px #00c6ff;
+.group:hover .blue-500 {
+  shadow: 0 0 8px #00c6ff;
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark {
+  background-color: #000;
+  color: #fff;
+
+  
+  .stat {
+    background-color: #e8ebf1;
+  }
 }

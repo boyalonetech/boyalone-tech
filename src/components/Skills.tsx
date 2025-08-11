@@ -281,7 +281,7 @@ const Skills = () => {
 
   return (
     <div className="mt-10" id="skills">
-      <h2 className="text-2xl font-bold mb-4 text-center">My Skills</h2>
+      <h2 className="2xl font-bold mb-4 center">My Skills</h2>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
         {skills.map((skill) => {
           const radius = 40;
@@ -294,7 +294,7 @@ const Skills = () => {
           return (
             <div
               key={skill.name}
-              className="bg-[#f5f8ff] p-2 rounded shadow text-center flex flex-col items-center"
+              className=" p-2 rounded shadow center flex flex-col items-center"
             >
               {/* Circular Progress with Icon in center */}
               <div className="relative w-24 h-24 mb-2">
@@ -332,12 +332,10 @@ const Skills = () => {
               </div>
 
               {/* Skill Name */}
-              <h3 className="text-sm font-semibold text-gray-800">
-                {skill.name}
-              </h3>
+              <h3 className="sm font-semibold">{skill.name}</h3>
 
               {/* Percentage */}
-              <p className="text-sm text-gray-600 mt-1">{skill.percent}%</p>
+              <p className="sm  mt-1">{skill.percent}%</p>
             </div>
           );
         })}

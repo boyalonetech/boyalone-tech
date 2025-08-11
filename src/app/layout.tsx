@@ -86,6 +86,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="theme-color" content="#3B82F6" />
 
         {/* ✅ Favicon */}
         <link rel="icon" href="/logo.png" />

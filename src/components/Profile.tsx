@@ -1,11 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import {
-  FaMapMarkerAlt,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Profile = () => {
@@ -13,7 +9,7 @@ const Profile = () => {
 
   return (
     <>
-      <aside className="w-full lg:max-w-[320px] sm:w-full sm:max-w-sm bg-white pb-6 rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
+      <aside className="w-full mt-4 lg:mt-0 lg:max-w-[320px] sm:w-full sm:max-w-sm  pb-6 rounded-none sm:rounded-xl prof shadow-lg h-screen overflow-y-scroll sm:my-18  sm:ml-[1px]">
         {/* Cover Image */}
         <div className="relative h-[180px] lg:h-40 bg-gradient-to-r from-blue-400 to-blue-600"></div>
 
@@ -24,10 +20,10 @@ const Profile = () => {
             className="cursor-pointer absolute -top-16 w-33 h-33 rounded-full border-4 border-white overflow-hidden shadow-md"
           >
             <Image
-              src="/IMG_4895~2.JPG"
+              src="/boyaloneamime.png"
               alt="Divine Timothy"
-              width={128}
-              height={128}
+              width={800}
+              height={800}
               className="object-cover w-full h-full"
             />
           </div>
@@ -35,23 +31,23 @@ const Profile = () => {
 
         {/* Profile Details */}
         <div className="mt-18 text-center px-3 pb-2">
-          <h2 className="text-[25px] font-bold text-gray-800">
-            Divine Timothy
-          </h2>
+          <h2 className="text-[25px] font-bold -900">Divine Timothy</h2>
           <div className="flex flex-col justify-center items-center">
-            <p className="text-md text-blue-600">Full-Stack Web Developer</p>
+            <p className="text-md text-gray-600 font-semibold">
+              Front-End Web Developer
+            </p>
             <div className="flex gap-2 w-max items-center">
               <p className="text-sm text-gray-500">App Developer</p>
               <span>|</span>
-              <p className="text-sm text-gray-500">Tech Content Creator</p>
+              <p className="text-sm text-gray-500">SEO Engineer</p>
             </div>
           </div>
-          <p className="flex items-center justify-center gap-1 text-sm text-gray-500 mt-2">
+          <p className="flex items-center justify-center gap-1 text-sm -500 mt-2">
             <FaMapMarkerAlt className="text-blue-500" /> Abia State, Nigeria
           </p>
 
           {/* Social Icons */}
-          <div className="flex justify-center gap-4 text-xl text-gray-600 mt-4">
+          <div className="flex justify-center gap-4 text-xl -600 mt-4">
             <Link
               href="https://web.facebook.com/boya1one"
               target="_blank"
@@ -168,7 +164,7 @@ const Profile = () => {
             <Link
               href="/"
               download
-              className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md transition text-sm flex items-center gap-2"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-2 rounded-md transition text-sm flex items-center gap-2"
             >
               <span>
                 <svg
@@ -187,7 +183,7 @@ const Profile = () => {
             </Link>
             <Link
               href="/contact"
-              className="border border-blue-500 hover:bg-blue-50 text-blue-500 px-3 py-2 rounded-md text-sm transition flex items-center gap-2"
+              className="border border-blue-500 hover:bg-blue-50 text-blue-500 px-2 py-2 rounded-md text-sm transition flex items-center gap-2"
             >
               <span>
                 <svg
@@ -212,7 +208,7 @@ const Profile = () => {
           </div>
 
           {/* Additional Content */}
-          <div className="border-t mt-6 pt-4 space-y-4 text-sm text-gray-600 text-left">
+          <div className="border-t mt-6 pt-4 space-y-4 text-sm -600 text-left">
             {/* Bio */}
             <p>
               Passionate about solving real-world problems using tech. I build
@@ -221,7 +217,7 @@ const Profile = () => {
 
             {/* Tech Stack */}
             <div>
-              <h4 className="text-gray-700 font-semibold mb-1">Tech Stack</h4>
+              <h4 className="-700 font-semibold mb-1">Tech Stack</h4>
               <div className="flex flex-wrap gap-2 text-xs">
                 {[
                   "React",
@@ -296,7 +292,7 @@ const Profile = () => {
 
             {/* Achievements */}
             <div>
-              <h4 className="text-gray-700 font-semibold mb-1">Achievements</h4>
+              <h4 className="-700 font-semibold mb-1">Achievements</h4>
               <ul className="list-disc list-inside space-y-1">
                 <li>4K+ projects completed</li>
                 <li>5+ years of experience</li>
@@ -306,7 +302,7 @@ const Profile = () => {
 
             {/* Languages */}
             <div className="mb-12">
-              <h4 className="text-gray-700 font-semibold mb-1">Languages</h4>
+              <h4 className="-700 font-semibold mb-1">Languages</h4>
               <p>English, Igbo</p>
 
               <div className="mt-6 hidden lg:block">
@@ -330,12 +326,12 @@ const Profile = () => {
           <div className="relative bg-white p-4 rounded-lg shadow-lg max-w-md">
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute top-2 right-2 text-gray-600 hover:text-red-500 text-2xl"
+              className="absolute top-2 right-2 -600 hover:text-red-500 text-2xl"
             >
               &times;
             </button>
             <Image
-              src="/IMG_4895~2.JPG"
+              src="/boyaloneamime.png"
               alt="Divine Timothy"
               width={800}
               height={800}
